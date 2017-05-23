@@ -1,6 +1,7 @@
+import { Board } from './../board/borad';
 import { Score } from './../../app/api';
 import { Component } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { NavController, ModalController } from 'ionic-angular';
 import { NativeStorage } from '@ionic-native/native-storage';
 import { Platform } from 'ionic-angular';
 
@@ -16,16 +17,30 @@ export class GamesPage {
 
   constructor(private navCtrl: NavController,
               private nativeStorage: NativeStorage,
-              private platform: Platform)
+              private platform: Platform,
+              private modalCtrl: ModalController)
   {
-     platform.ready().then(() => {
-       nativeStorage.getItem(this.GAMES_ITEM).then(games => this.games = games);
-     });
+     platform.ready().then(() => this.storeGames());
   }
 
   addGame(){
     this.games.push([{player:"some player", rounds:[0,0,0,0,0,0,0,0,0]}]);
-    this.nativeStorage.setItem(this.GAMES_ITEM, this.games);
+        
   }
-  
+  removeGame(i: number){
+    this.games.splice(i, 1);
+    this.storeGames();
+  }
+
+  openModal(game) {
+    let modal = this.modalCtrl.create(Board, {'game':game});
+    modal.present();
+  }
+
+  private storeGames(){
+    if(this.platform.is('mobile'))
+    {
+      this.nativeStorage.setItem(this.GAMES_ITEM, this.games);
+    }
+  }
 }

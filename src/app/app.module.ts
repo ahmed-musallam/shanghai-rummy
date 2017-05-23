@@ -1,3 +1,4 @@
+import { Board } from './../pages/board/borad';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -18,7 +19,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GamesPage,
     HomePage,
     AboutPage,
-    TabsControllerPage
+    TabsControllerPage,
+    Board
   ],
   imports: [
     BrowserModule,
@@ -30,7 +32,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     GamesPage,
     HomePage,
     AboutPage,
-    TabsControllerPage
+    TabsControllerPage,
+    Board
   ],
   providers: [
     StatusBar,
