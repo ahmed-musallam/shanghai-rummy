@@ -6,6 +6,7 @@ import { GamesPage } from '../pages/games/games';
 import { HomePage } from '../pages/home/home';
 import { AboutPage } from '../pages/about/about';
 import { TabsControllerPage } from '../pages/tabs-controller/tabs-controller';
+import { NativeStorage } from '@ionic-native/native-storage';
 
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -34,6 +35,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
   providers: [
     StatusBar,
     SplashScreen,
+    NativeStorage,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
