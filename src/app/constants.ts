@@ -1,4 +1,4 @@
-export const rounds = [
+export const roundNames = [
     "2 sets of 3",
     "1 set of 3\n1 run of 4",
     "2 runs of 4",
