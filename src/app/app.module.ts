@@ -1,4 +1,4 @@
-import { Board } from './../pages/board/borad';
+import { Board } from './../components/board/borad';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';

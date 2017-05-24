@@ -1,4 +1,4 @@
-import { Board } from './../board/borad';
+import { Board } from './../../components/board/borad';
 import { Score } from './../../app/api';
 import { Component } from '@angular/core';
 import { NavController, ModalController } from 'ionic-angular';
@@ -11,8 +11,6 @@ import { Platform } from 'ionic-angular';
 })
 export class GamesPage {
   games: Score[][] = [];
-
-  private emptyRounds = [0,0,0,0,0,0,0,0,0];
   private GAMES_ITEM = 'games';
 
   constructor(private navCtrl: NavController,
@@ -24,8 +22,7 @@ export class GamesPage {
   }
 
   addGame(){
-    this.games.push([{player:"some player", rounds:[0,0,0,0,0,0,0,0,0]}]);
-        
+    this.games.push([{player:"some player", rounds:[0,0,0,0,0,0,0,0,0]}]); 
   }
   removeGame(i: number){
     this.games.splice(i, 1);
