@@ -1,4 +1,4 @@
-import { RoundConstants } from './../../api/constants';
+import { RoundConstants, Round } from './../../api/constants';
 import { Game } from './../../api/game';
 import { Component, Input, OnInit } from '@angular/core';
 import { Platform, NavParams, ViewController } from 'ionic-angular';
@@ -8,10 +8,10 @@ import { Platform, NavParams, ViewController } from 'ionic-angular';
   templateUrl: 'round.html',
   styles:['*{ white-space: pre-line; }', `.col{border-bottom: solid 1px gray;}`]
 })
-export class Round implements OnInit{
-  @Input() round:number;
+export class RoundComponent implements OnInit{
+  @Input() roundNumber:number;
   @Input() game: Game;
-  name: string;
+  round: Round;
 
   constructor(public platform: Platform,
               public params: NavParams,
@@ -19,7 +19,7 @@ export class Round implements OnInit{
   ngOnInit()
   {
     console.log(JSON.stringify(this.game));
-    this.name = RoundConstants.getRoundName(this.round);
+    this.round = RoundConstants.getRound(this.roundNumber);
   }
 
 }

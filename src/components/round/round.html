@@ -1,10 +1,10 @@
-<ion-card>
-  <ion-card-header> {{name}}</ion-card-header>
+<ion-card [style.background-color]="round.color">
+  <ion-card-header><b style="color:white">{{round.name}}</b></ion-card-header>
   <ion-list>
-    <ion-item *ngFor="let player of game.players">
+    <ion-item *ngFor="let player of game.players; let i=index">
       <ion-icon name="ios-contact" item-left></ion-icon>
-      {{player.name}}
-      <em item-right>{{player.score.getScore(round)}}</em>
+      <div item-left style="max-width:40%;min-width:40%; overflow:hidden">{{player.name}}</div>
+      <ion-input style="border-left:solid 1px black;"item-right type="number" clearInput="true" placeholder="score"></ion-input>
     </ion-item>
   </ion-list>
 </ion-card>

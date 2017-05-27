@@ -1,6 +1,7 @@
+import { GameService } from './../services/game.service';
 import { GameModal } from './../components/game-modal/game-modal';
 import { CreateGameModal } from './../components/create-game-modal/create-game-modal';
-import { Round } from './../components/round/round';
+import { RoundComponent } from './../components/round/round';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -22,7 +23,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     AboutPage,
     TabsControllerPage,
-    Round,
+    RoundComponent,
     CreateGameModal,
     GameModal
   ],
@@ -37,7 +38,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     AboutPage,
     TabsControllerPage,
-    Round,
+    RoundComponent,
     CreateGameModal,
     GameModal
   ],
@@ -45,7 +46,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     StatusBar,
     SplashScreen,
     NativeStorage,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    GameService
   ]
 })
 export class AppModule {}
