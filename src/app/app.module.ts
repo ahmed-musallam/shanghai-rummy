@@ -1,4 +1,6 @@
-import { Board } from './../components/board/borad';
+import { GameModal } from './../components/game-modal/game-modal';
+import { CreateGameModal } from './../components/create-game-modal/create-game-modal';
+import { Round } from './../components/round/round';
 import { NgModule, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { IonicApp, IonicModule, IonicErrorHandler } from 'ionic-angular';
@@ -20,7 +22,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     AboutPage,
     TabsControllerPage,
-    Board
+    Round,
+    CreateGameModal,
+    GameModal
   ],
   imports: [
     BrowserModule,
@@ -33,7 +37,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     HomePage,
     AboutPage,
     TabsControllerPage,
-    Board
+    Round,
+    CreateGameModal,
+    GameModal
   ],
   providers: [
     StatusBar,
