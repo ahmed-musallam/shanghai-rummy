@@ -25,7 +25,7 @@ export class Score
   }
   getScore(roundNumber: number):number
   {
-    if(roundNumber < 1 || roundNumber > 9) return null;
+    if(!this.isValid(roundNumber)) return null;
     return this["round"+roundNumber];
   }
 
@@ -33,4 +33,13 @@ export class Score
   {
     return [this.round1, this.round2, this.round3, this.round4, this.round5, this.round6, this.round7, this.round8, this.round9];
   }
+  setScore(roundNumber:number, score:number){
+    console.log(`in Score.setSccore(${roundNumber}, ${score})`);
+    if(!this.isValid(roundNumber)) return null;
+    console.log("valid number");
+    this["round"+roundNumber] = score;
+    console.log(`saved score ${this["round"+roundNumber]}`);
+  }
+
+  private isValid(roundNumber){ return roundNumber > 0 && roundNumber < 10}
 }

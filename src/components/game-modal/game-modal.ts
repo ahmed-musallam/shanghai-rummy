@@ -14,7 +14,6 @@ export class GameModal {
               public params: NavParams, 
               public viewCtrl: ViewController) {
                   this.game = this.params.get('game'); 
-                  console.log(JSON.stringify(this.game));
               } 
 
   dismiss() { this.viewCtrl.dismiss(); }

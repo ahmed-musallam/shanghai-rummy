@@ -4,7 +4,12 @@
     <ion-item *ngFor="let player of game.players; let i=index">
       <ion-icon name="ios-contact" item-left></ion-icon>
       <div item-left style="max-width:40%;min-width:40%; overflow:hidden">{{player.name}}</div>
-      <ion-input style="border-left:solid 1px black;"item-right type="number" clearInput="true" placeholder="score"></ion-input>
+      <ion-input 
+         style="border-left:solid 1px black;"
+         item-right type="number"
+         clearInput="true"
+         placeholder="score"
+         (input)="saveScore(game, player, round.number, $event.target.value)"></ion-input>
     </ion-item>
   </ion-list>
 </ion-card>

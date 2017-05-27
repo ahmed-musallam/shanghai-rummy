@@ -29,8 +29,6 @@ export class GamesPage {
     // if modal was saved, add game. otherwise nothing
     modal.onDidDismiss((game, role) => 
     {
-      console.log(JSON.stringify(game));
-      console.log(JSON.stringify(role));
       if(game){
         var index = this.games.push(game);
         this.gameService.storeGames(this.games);
@@ -40,7 +38,13 @@ export class GamesPage {
   }
 
   openGame(indx){
-    let modal = this.modalCtrl.create(GameModal, {'game':this.games[indx]});
-    modal.present();
+    this.gameService.getGames().then(games => {
+      this.games = games;
+      let modal = this.modalCtrl.create(GameModal, {'game':this.games[indx]});
+      modal.present();
+    })
+  }
+  removeGame(indx){
+    this.games = this.gameService.removeGame(indx);
   }
 }

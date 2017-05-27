@@ -1,3 +1,5 @@
+import { Player } from './../../api/player';
+import { GameService } from './../../services/game.service';
 import { RoundConstants, Round } from './../../api/constants';
 import { Game } from './../../api/game';
 import { Component, Input, OnInit } from '@angular/core';
@@ -15,11 +17,16 @@ export class RoundComponent implements OnInit{
 
   constructor(public platform: Platform,
               public params: NavParams,
+              public gameService: GameService,
               public viewCtrl: ViewController){}
   ngOnInit()
   {
-    console.log(JSON.stringify(this.game));
     this.round = RoundConstants.getRound(this.roundNumber);
+  }
+
+  saveScore(game:Game, player:Player, roundIndx:number, score:any){
+    console.log(`${game.name}, ${player.name}, ${roundIndx}, ${score}`)
+    this.gameService.saveScore(game, player,roundIndx, parseInt(score));
   }
 
 }
