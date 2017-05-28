@@ -1,3 +1,4 @@
+import { TotalComponent } from './../components/total/total';
 import { GameService } from './../services/game.service';
 import { GameModal } from './../components/game-modal/game-modal';
 import { CreateGameModal } from './../components/create-game-modal/create-game-modal';
@@ -25,7 +26,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsControllerPage,
     RoundComponent,
     CreateGameModal,
-    GameModal
+    GameModal,
+    TotalComponent
   ],
   imports: [
     BrowserModule,
@@ -40,7 +42,8 @@ import { SplashScreen } from '@ionic-native/splash-screen';
     TabsControllerPage,
     RoundComponent,
     CreateGameModal,
-    GameModal
+    GameModal,
+    TotalComponent
   ],
   providers: [
     StatusBar,

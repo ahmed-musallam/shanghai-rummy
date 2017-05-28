@@ -20,7 +20,7 @@ export class GamesPage {
     this.platform
     .ready()
     .then(() => this.gameService.getGames()
-                .then(games => this.games = games));
+                .then(games => {console.log(JSON.stringify(games)); this.games = games;}));
   }
 
   newGame() {
@@ -29,7 +29,8 @@ export class GamesPage {
     // if modal was saved, add game. otherwise nothing
     modal.onDidDismiss((game, role) => 
     {
-      if(game){
+      if(game)
+      {
         var index = this.games.push(game);
         this.gameService.storeGames(this.games);
         this.openGame(index-1);
@@ -39,6 +40,7 @@ export class GamesPage {
 
   openGame(indx){
     this.gameService.getGames().then(games => {
+      console.log(JSON.stringify(games));
       this.games = games;
       let modal = this.modalCtrl.create(GameModal, {'game':this.games[indx]});
       modal.present();

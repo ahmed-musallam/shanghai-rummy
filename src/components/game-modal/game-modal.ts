@@ -9,6 +9,7 @@ import { Platform, NavParams, ViewController } from 'ionic-angular';
 export class GameModal {
   game: Game;
   rounds = RoundConstants.rounds;
+  showTotal = false;
 
   constructor(public platform: Platform, 
               public params: NavParams, 
@@ -17,5 +18,8 @@ export class GameModal {
               } 
 
   dismiss() { this.viewCtrl.dismiss(); }
+  toggle(){
+    this.showTotal = !this.showTotal;
+  }
   
 }

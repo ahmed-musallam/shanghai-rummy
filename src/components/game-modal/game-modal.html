@@ -7,11 +7,21 @@
       <button ion-button (click)="dismiss()">
                 <span ion-text color="primary" showWhen="ios">Back</span>
                 <ion-icon name="md-close" showWhen="android,windows"></ion-icon>
-            </button>
+      </button>
+    </ion-buttons>
+    <ion-buttons end>
+      <button ion-button (click)="toggle()">
+          <span ion-text color="primary">{{showTotal ? "Game" : "Totals"}}</span>
+      </button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
-  <round *ngFor="let round of rounds; let i=index" [roundNumber]="i+1" [game]="game"></round>
+  <ng-container *ngIf="!showTotal">
+      <round *ngFor="let round of rounds; let i=index" [roundNumber]="i+1" [game]="game"></round>
+  </ng-container>
+  <ng-container *ngIf="showTotal">
+    <total [game]="game"></total>
+  </ng-container>
 </ion-content>

@@ -5,10 +5,11 @@
       <ion-icon name="ios-contact" item-left></ion-icon>
       <div item-left style="max-width:40%;min-width:40%; overflow:hidden">{{player.name}}</div>
       <ion-input 
-         style="border-left:solid 1px black;"
-         item-right type="number"
-         clearInput="true"
+         style="border-left:solid 1px grey;"
+         item-right 
+         type="tel"
          placeholder="score"
+         value="{{player.score.getScore(round.number)}}"
          (input)="saveScore(game, player, round.number, $event.target.value)"></ion-input>
     </ion-item>
   </ion-list>

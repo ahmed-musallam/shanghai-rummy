@@ -7,8 +7,7 @@ import { Platform, NavParams, ViewController } from 'ionic-angular';
 
 @Component({
   selector: 'round',
-  templateUrl: 'round.html',
-  styles:['*{ white-space: pre-line; }', `.col{border-bottom: solid 1px gray;}`]
+  templateUrl: 'round.html'
 })
 export class RoundComponent implements OnInit{
   @Input() roundNumber:number;

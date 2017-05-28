@@ -9,11 +9,12 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page4">
-  <div id="about-markdown3" class="show-list-numbers-and-dots">
-    <p style="color:#000000;">
-      <strong>
-        This is Shanghi Rummy!
-      </strong>
-    </p>
-  </div>
+  <ion-list>
+    <ion-list-header>
+      Card Points 
+    </ion-list-header>
+    
+    <ion-item *ngFor="let card of cards">{{card.name}}<ion-note item-end>{{card.points}}</ion-note></ion-item>
+    <ion-item> Ace <ion-note item-end>20</ion-note></ion-item>
+  </ion-list>
 </ion-content>
