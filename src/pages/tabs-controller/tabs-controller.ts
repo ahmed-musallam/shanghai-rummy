@@ -11,8 +11,9 @@ import { AboutPage } from '../about/about';
 export class TabsControllerPage {
 
   tab1Root: any = GamesPage;
-  tab2Root: any = HomePage;
-  tab3Root: any = AboutPage;
+  tab2Root: any = AboutPage;
+  tab3Root: any = HomePage;
+  
   constructor(public navCtrl: NavController) {
   }
   

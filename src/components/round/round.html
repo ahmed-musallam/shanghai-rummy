@@ -1,13 +1,13 @@
 <ion-card [style.background-color]="round.color">
-  <ion-card-header>
+  <ion-card-header (click)="showScores = !showScores" tappable>
       <ion-row>
     <ion-col col-11>
       <b class="white">{{round.name}}</b>
     </ion-col>
-    <ion-col col-1 (click)="showScores = !showScores">
+    <ion-col col-1>
           <ion-icon
             class="white large-ico"
-            name="arrow-dropdown-circle"></ion-icon>
+            [name]="showScores?'ios-arrow-dropup-circle':'arrow-dropdown-circle'"></ion-icon>
     </ion-col>
     
   </ion-row>

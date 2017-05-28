@@ -8,16 +8,16 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content id="page2">
+<ion-content>
+  <button full ion-button (click)="newGame()" tappable>Start New Game</button>
   <ion-card  *ngFor="let game of games; let i=index">
     <ion-card-header>
       <ion-grid>
         <ion-row>
-          <ion-col col-11 (click)="openGame(i)">{{game.name}}</ion-col>
-          <ion-icon col-1 name="ios-trash-outline" (click)="removeGame(i)"><!-- addd remove game functionality here --></ion-icon> 
+          <ion-col col-11 (click)="openGame(i)" tappable>{{game.name}}</ion-col>
+          <ion-icon col-1 name="ios-trash-outline" (click)="removeGame(i)" tappable><!-- addd remove game functionality here --></ion-icon> 
         </ion-row>
       </ion-grid>
     </ion-card-header>
   </ion-card>
-  <button full ion-button (click)="newGame()">Start New Game</button>
 </ion-content>
