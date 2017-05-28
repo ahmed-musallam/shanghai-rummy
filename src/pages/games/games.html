@@ -8,7 +8,7 @@
     </ion-title>
   </ion-navbar>
 </ion-header>
-<ion-content padding id="page2">
+<ion-content id="page2">
   <ion-card  *ngFor="let game of games; let i=index">
     <ion-card-header>
       <ion-grid>
@@ -19,5 +19,5 @@
       </ion-grid>
     </ion-card-header>
   </ion-card>
-  <button block ion-button round (click)="newGame()">Start New Game</button>
+  <button full ion-button (click)="newGame()">Start New Game</button>
 </ion-content>

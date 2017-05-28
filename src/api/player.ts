@@ -10,4 +10,11 @@ export class Player
     this.name = player.name;
     this.score = new Score(player.score);
   }
+
+  public static fromName(name:string):Player
+  {
+    var p = new Player();
+    p.name = name;
+    return p;
+  }
 }

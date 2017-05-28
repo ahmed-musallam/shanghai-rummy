@@ -13,6 +13,7 @@ export class RoundComponent implements OnInit{
   @Input() roundNumber:number;
   @Input() game: Game;
   round: Round;
+  showScores: true;
 
   constructor(public platform: Platform,
               public params: NavParams,

@@ -1,6 +1,18 @@
 <ion-card [style.background-color]="round.color">
-  <ion-card-header><b style="color:white">{{round.name}}</b></ion-card-header>
-  <ion-list>
+  <ion-card-header>
+      <ion-row>
+    <ion-col col-11>
+      <b class="white">{{round.name}}</b>
+    </ion-col>
+    <ion-col col-1 (click)="showScores = !showScores">
+          <ion-icon
+            class="white large-ico"
+            name="arrow-dropdown-circle"></ion-icon>
+    </ion-col>
+    
+  </ion-row>
+  </ion-card-header>
+  <ion-list *ngIf="showScores">
     <ion-item *ngFor="let player of game.players; let i=index">
       <ion-icon name="ios-contact" item-left></ion-icon>
       <div item-left style="max-width:40%;min-width:40%; overflow:hidden">{{player.name}}</div>
