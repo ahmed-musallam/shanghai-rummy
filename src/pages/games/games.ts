@@ -43,7 +43,7 @@ export class GamesPage {
 
   openGame(indx){
     this.gameService.getGames().then(games => {
-      console.log(JSON.stringify(games));
+      // console.log(JSON.stringify(games));
       this.games = games;
       let modal = this.modalCtrl.create(GameModal, {'game':this.games[indx]});
       modal.present();

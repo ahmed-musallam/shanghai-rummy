@@ -36,11 +36,11 @@ export class Score
   }
 
   setScore(roundNumber:number, score:number){
-    console.log(`in Score.setSccore(${roundNumber}, ${score})`);
+    // console.log(`in Score.setSccore(${roundNumber}, ${score})`);
     if(!this.isValid(roundNumber)) return null;
-    console.log("valid number");
+    // console.log("valid number");
     this["round"+roundNumber] = score;
-    console.log(`saved score ${this["round"+roundNumber]}`);
+    // console.log(`saved score ${this["round"+roundNumber]}`);
   }
 
   getTotalScore(){
