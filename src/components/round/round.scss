@@ -1,4 +1,15 @@
 round{
     .white{ color:white;}
-    .large-ico{ font-size:25px}
+    .large-ico { font-size:25px}
+    .player-name
+    {
+        max-width:50%;
+        min-width:50%;
+        overflow:hidden
+    }
+    .player-score
+    {
+        border-left:solid 1px grey;
+        padding-left:10px;
+    }
 }

@@ -28,5 +28,4 @@ export class RoundComponent implements OnInit{
     // console.log(`${game.name}, ${player.name}, ${roundIndx}, ${score}`)
     this.gameService.saveScore(game, player,roundIndx, parseInt(score));
   }
-
 }

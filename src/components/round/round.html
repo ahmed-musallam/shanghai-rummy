@@ -15,10 +15,10 @@
   <ion-list *ngIf="showScores">
     <ion-item *ngFor="let player of game.players; let i=index">
       <ion-icon name="ios-contact" item-left></ion-icon>
-      <div item-left style="max-width:40%;min-width:40%; overflow:hidden">{{player.name}}</div>
-      <ion-input 
-         style="border-left:solid 1px grey;"
-         item-right 
+      <div item-left class="player-name">{{player.name}}</div>
+      <ion-input
+         item-right
+         class="player-score"
          type="tel"
          placeholder="score"
          value="{{player.score.getScore(round.number)}}"

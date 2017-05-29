@@ -1,8 +1,14 @@
 total{
-    .score{
+    .player-name
+    {
+        max-width:50%;
+        min-width:50%;
+        overflow:hidden
+    }
+    .player-score
+    {
+        min-width: 50px;
         border-left:solid 1px grey;
         padding-left:10px;
-        max-width:40%;
-        min-width:40%;
     }
 }
