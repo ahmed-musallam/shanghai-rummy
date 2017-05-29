@@ -15,7 +15,6 @@ export class AboutPage {
     {name:"2 - 7", points:5}
   ]
 
-  constructor(public navCtrl: NavController) {
-  }
+  constructor(public navCtrl: NavController) {}
   
 }

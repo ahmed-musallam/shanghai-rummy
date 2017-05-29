@@ -19,8 +19,11 @@ export class GamesPage {
   {
     this.platform
     .ready()
-    .then(() => this.gameService.getGames()
-                .then(games => {console.log(JSON.stringify(games)); this.games = games;}));
+    .then(() => 
+      this.gameService.getGames()
+      .then(games => this.games = games))
+      .catch(err => {});
+      
   }
 
   newGame() {
