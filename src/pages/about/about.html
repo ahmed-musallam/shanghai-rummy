@@ -9,12 +9,295 @@
   </ion-navbar>
 </ion-header>
 <ion-content padding id="page4">
-  <ion-list>
-    <ion-list-header>
-      Card Points 
-    </ion-list-header>
-    
-    <ion-item *ngFor="let card of cards">{{card.name}}<ion-note item-end>{{card.points}}</ion-note></ion-item>
-    <ion-item> Ace <ion-note item-end>20</ion-note></ion-item>
-  </ion-list>
+  <div id="about-markdown3" class="show-list-numbers-and-dots">
+    <h3>
+      Rules of Shanghai Rummy
+    </h3>
+    <h4>
+      Number of Players:
+    </h4>
+    <p style="color:#000000;">
+      3 to 8
+    </p>
+    <h4>
+      The Deck:
+    </h4>
+    <p style="color:#000000;">
+      Each deck includes 52 cards and 2 jokers.
+    </p>
+    <ul>
+      <li>
+        <strong>
+          3 to 4 players:
+        </strong>
+        2 decks
+      </li>
+      <li>
+        <strong>
+          5 to 6 players:
+        </strong>
+        3 decks
+      </li>
+      <li>
+        <strong>
+          7 to 8 players:
+        </strong>
+        4 decks
+      </li>
+    </ul>
+    <h4>
+      Burning and Discarding
+    </h4>
+    <blockquote>
+      <p style="color:#000000;">
+        this is customary and by no means necessary
+      </p>
+    </blockquote>
+    <p style="color:#000000;">
+      This is done by announcing the card to everyone then placing it face-up under the deck. If the burned card happens to be a face card (King, Queen, Jack or Ace) that card is placed back into the deck at a random location. Another card is then drawn and
+      the process continues until a non-face card is drawn.
+    </p>
+    <h4>
+      Dealing
+    </h4>
+    <p style="color:#000000;">
+      <strong>
+        shuffling:
+      </strong>
+      Choose a
+      <strong>
+        dealer
+      </strong>
+      . The dealer shuffles the cards and asks the player to their left to cut the deck.
+    </p>
+    <p style="color:#000000;">
+      <strong>
+        Burning a card:
+      </strong>
+      <em>
+        Customary and not necessary
+      </em>
+      . Upon cutting the deck, burn a card. This is done by announcing the card to everyone then placing it face-up under the deck. If the burned card happens to be a face card (King, Queen, Jack or Ace) that card is placed back into the deck at a random location.
+      Another card is then drawn and the process continues until a non-face card is drawn and burned.
+    </p>
+    <p style="color:#000000;">
+      <strong>
+        Dealing:
+      </strong>
+      Each player is then dealt 11 cards.
+    </p>
+    <p style="color:#000000;">
+      <strong>
+        Discarding
+      </strong>
+      After dealing, a card is discarded (face-up) to start the
+      <strong>
+        discard pile
+      </strong>
+    </p>
+    <h4>
+      Goal
+    </h4>
+    <p style="color:#000000;">
+      A game has 7 rounds, each
+      <strong>
+        round
+      </strong>
+      has a
+      <strong>
+        contract
+      </strong>
+      . A contract is a set of rules that dictate what the player will be collecting in order to
+      <strong>
+        lay-down
+      </strong>
+      . The player who lays down all of their cards first wins the round.
+    </p>
+    <h4>
+      Contract
+    </h4>
+    <p style="color:#000000;">
+      For each of the 7 rounds, there is a contract. A contract is a set of rules that dictate what the player will be collecting in order to
+      <strong>
+        lay-down
+      </strong>
+      .
+    </p>
+    <p style="color:#000000;">
+      The contracts for the 7 rounds are played in order:
+    </p>
+    <ol>
+      <li>
+        2 sets of 3
+      </li>
+      <li>
+        1 set of 3 &amp; 1 run of 4
+      </li>
+      <li>
+        2 runs of 4
+      </li>
+      <li>
+        3 sets of 3
+      </li>
+      <li>
+        2 sets of 3 &amp; 1 run of 4
+      </li>
+      <li>
+        1 set of 3 &amp; 2 runs of 4
+      </li>
+      <li>
+        3 runs of 4
+      </li>
+      <li>
+        2 sets of 3 &amp; 2 runs of 4
+      </li>
+      <li>
+        <p style="color:#000000;">
+          4 sets of 3
+        </p>
+      </li>
+      <li>
+        <p style="color:#000000;">
+          <strong>
+            Set of 3
+          </strong>
+          3
+          <strong>
+            or more
+          </strong>
+          cards of the same
+          <strong>
+            value
+          </strong>
+          regardless of the suite.
+        </p>
+      </li>
+      <li>
+        <strong>
+          Run of 4
+        </strong>
+        4
+        <strong>
+          or more
+        </strong>
+        consecutive cards of the same suite.
+      </li>
+    </ol>
+    <p style="color:#000000;">
+      <strong>
+        For rounds of 2 or more sets or runs:
+      </strong>
+    </p>
+    <ul>
+      <li>
+        No 2 sets can have the same value. For example: [3,3,3] and [3,3,3] are, in fact, one big set: [3,3,3,3,3,3].
+      </li>
+      <li>
+        No two runs can be consecutive. for example, [1,2,3,4] [5,6,7,8] cannot be laid down as two runs while: [1,2,3,4] [4,5,6,7] can be laid down as two runs; the &#39;4&#39; separates the two runs, in this case.
+      </li>
+    </ul>
+    <h4>
+      Wild cards
+    </h4>
+    <ul>
+      <li>
+        <strong>
+          Joker:
+        </strong>
+        a joker can substitute any card, but only
+        <strong>
+          one
+        </strong>
+        Joker is allowed per set or run.
+      </li>
+      <li>
+        <strong>
+          Ace
+        </strong>
+        in a run, the Ace can be played after a &#39;2&#39; or before a king (of the same suite). An Ace before a kink is not considered a &#39;1&#39;; a player
+        <strong>
+          can&#39;t
+        </strong>
+        play the run [Q, K, Ace, 2] for example.
+      </li>
+    </ul>
+    <h3>
+      Game Play
+    </h3>
+    <h4>
+      Player Turn
+    </h4>
+    <p style="color:#000000;">
+      Each player&#39;s turn starts with a draw of one card. A Player may draw one card from the top of the deck
+      <strong>
+        or
+      </strong>
+      the top card on the discard pile (discarded by the previous player). The turn ends with the discard of one card to the discard pile (face up). between a draw and a discard, a player may
+      <strong>
+        lay-down
+      </strong>
+      a collection of cards that meet the current round&#39;s contract.
+    </p>
+    <h4>
+      Laying down
+    </h4>
+    <p style="color:#000000;">
+      A player may lay down once they&#39;ve collected cards that match the correct contract. Once ready to lay down, place your cards on the table from high to low for everyone to see. A player does not have to lay down all of their cards at once.
+    </p>
+    <h4>
+      After Laying down
+    </h4>
+    <p style="color:#000000;">
+      Once a player lays down, they can add cards to their own sets/runs and other players sets/runs in subsequent turns.
+    </p>
+    <h4>
+      Buying
+    </h4>
+    <blockquote>
+      <p style="color:#000000;">
+        A player may buy only twice, and
+        <strong>
+          before
+        </strong>
+        laying down.
+      </p>
+    </blockquote>
+    <p style="color:#000000;">
+      After any player discards and it&#39;s not your turn, you may ask to buy the discarded card (even if you&#39;ve discarded it). The player whose turn is closest from the player who discarded has precedence to buy the card. If all players, between the discarding
+      player and you, do not want to buy, you are granted a buy. Once granted a buy, you can pick the discarded card plus 2 other cards from the top of the deck. The game, then, proceeds as normal.
+    </p>
+    <h4>
+      Winning
+    </h4>
+    <p style="color:#000000;">
+      A player can win the game by laying down all of their cards or laying down the contract then adding cards to already laid down sets/runs. The last card
+      <strong>
+        cannot
+      </strong>
+      be discarded to win the game.
+    </p>
+    <h4>
+      Scoring
+    </h4>
+    <p style="color:#000000;">
+      After a player wins the round. Each player counts the points for all the cards in their hands following the card-to-point list:
+    </p>
+    <ul>
+      <li>
+        Joker: 50
+      </li>
+      <li>
+        Ace: 20
+      </li>
+      <li>
+        2-7: 5
+      </li>
+      <li>
+        8-K: 10
+      </li>
+    </ul>
+    <p style="color:#000000;">
+      points are recorded for each round. The player with the least score at the end of all 7 rounds wins!
+    </p>
+  </div>
 </ion-content>
