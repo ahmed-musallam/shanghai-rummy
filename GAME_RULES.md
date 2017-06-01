@@ -10,7 +10,7 @@ Each deck includes 52 cards and 2 jokers.
 - **5 to 6 players:** 3 decks
 - **7 to 8 players:** 4 decks
 
-####Burning and Discarding
+####Burning a card *before dealing*
 > this is customary and by no means necessary
 
 This is done by announcing the card to everyone then placing it face-up under the deck. If the burned card happens to be a face card (King, Queen, Jack or Ace) that card is placed back into the deck at a random location. Another card is then drawn and the process continues until a non-face card is drawn. 
@@ -53,7 +53,7 @@ The contracts for the 7 rounds are played in order:
 
 ####Wild cards
 - **Joker:** a joker can substitute any card, but only **one** Joker is allowed per set or run.
-- **Ace** in a run, the Ace can be played after a '2' or before a king (of the same suite). An Ace before a kink is not considered a '1'; a player **can't** play the run [Q, K, Ace, 2] for example.
+- **Ace** in a run, the Ace can be played after a *two* or before a *king* (of the same suite). An Ace before a king is not considered a *one*; a player **can't** play the run [Q, K, Ace, 2] for example.
 
 ###Game Play
 
@@ -61,7 +61,7 @@ The contracts for the 7 rounds are played in order:
 Each player's turn starts with a draw of one card. A Player may draw one card from the top of the deck **or** the top card on the discard pile (discarded by the previous player). The turn ends with the discard of one card to the discard pile (face up). between a draw and a discard, a player may **lay-down** a collection of cards that meet the current round's contract.
 
 ####Laying down
-A player may lay down once they've collected cards that match the correct contract. Once ready to lay down, place your cards on the table from high to low for everyone to see. A player does not have to lay down all of their cards at once.
+A player may lay down once they've collected cards that match the correct contract. Once ready to lay down, place your cards on the table from high to low for everyone to see. A player does not have to lay down all of their cards at once, *except for the last round*. In the last round, a player **must** laydown **all** of thier cards; thereby winning the round.
 
 ####After Laying down
 Once a player lays down, they can add cards to their own sets/runs and other players sets/runs in subsequent turns.
