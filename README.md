@@ -1,6 +1,10 @@
-This is a project based on [Ionic](http://ionicframework.com/docs/).
+# Shanghai Rummy
 
-> see the web demo here: http://ahmedmusallam.com/shanghai-rummy/index.html
+This is a project based on [Ionic Framework](http://ionicframework.com/docs/). An effort to learn ionic framework and build an ios/android app with angular 2.
+
+At the moment, this appllication is used ton track score for Shanghai Rummy.
+
+> see/use the web demo here: http://ahmedmusallam.com/shanghai-rummy/index.html
 
 ### Run with ionic cli:
 
